@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	Todo List
+{% endblock %}
+
+{% block body %}
+	<style>
+		.example-wrapper {
+			margin: 1em auto;
+			max-width: 800px;
+			width: 95%;
+			font: 18px / 1.5 sans-serif;
+		}
+		.example-wrapper code {
+			background: #F5F5F5;
+			padding: 2px 6px;
+		}
+
+		.algneLeft {
+			margin-left: 530px;
+		}
+	</style>
+
+	<div class="example-wrapper">
+		<h1>liste brieve des taches</h1>
+
+		<form>
+			<div class="mb-3">
+				<label for="exampleInputEmail1" class="form-label">Titre</label>
+				<input
+				type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+			{# <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> #}
+			</div>
+			<textarea class="form-control" placeholder="Mettre ici la description" id="floatingTextarea"></textarea>
+			<label for="floatingTextarea">Description</label>
+			<div class="mb-3 form-check">{# <input type="checkbox" class="form-check-input" id="exampleCheck1"> #}
+				{# <label class="form-check-label" for="exampleCheck1">Check me out</label> #}
+			</div>
+			<button type="submit" class="btn btn-primary">Creer</button>
+		</form>
+
+		<br>
+
+		<div id="content">
+			<a href="#" class="list-group-item list-group-item-action active" aria-current="true">
+				<div class="d-flex w-100 justify-content-between">
+					<h5 class="mb-1">List group item heading</h5>
+					<small>3 days ago</small>
+					<button type="button" class="btn btn-danger btn-sm badge">X</button>
+				</div>
+				<p class="mb-1">Some placeholder content in a paragraph.</p>
+				<input class="form-check-input me-1" type="checkbox" value="">
+				<small>And some small print.</small>
+				<button type="button" class="btn btn-danger btn-sm badge">X</button>
+			</a>
+
+			{# <ol class="list-group list-group-numbered"> #}
+			<li class="list-group-item d-flex justify-content-between align-items-start">
+				<input class="form-check-input me-1" type="checkbox" value="">
+				<div class="ms-2 me-auto">
+					<div class="fw-bold">Subheading</div>
+					{# Content for list item #}
+				</div>
+				<button type="button" class="btn btn-danger btn-sm badge">X</button>
+				{# <smallclass="mb-1">3 days ago</small> #}
+				{# <span class="badge bg-primary rounded-pill">14</span> #}
+			</li>
+			<li class="list-group-item d-flex justify-content-between align-items-start">
+				<input class="form-check-input me-1" type="checkbox" value="">
+				<div class="ms-2 me-auto">
+					<div class="fw-bold">blablabla</div>
+				</div>
+				<button type="button" class="btn btn-danger btn-sm badge">X</button>
+			</li>
+			<li class="list-group-item d-flex justify-content-between align-items-start">
+				<input class="form-check-input me-1" type="checkbox" value="">
+				<div class="ms-2 me-auto">
+					<div class="fw-bold">rien</div>
+				</div>
+				<button type="button" class="btn btn-danger btn-sm badge">X</button>
+			</li>
+
+			{# </ol> #}
+		</div>
+		{# <ul>
+																																																																																																																																								<li>Your controller at
+																																																																																																																																						</li>
+																																																																																																																																							</ul> #}
+	</div>
+{% endblock %}
